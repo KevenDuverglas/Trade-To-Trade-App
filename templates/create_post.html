@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trading Website - Post Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header>
+    <h1>Post an Item for Trade</h1>
+</header>
+<nav>
+    <a href="/home">Home</a>
+    <a href="/items">Browse Items</a>
+    <a href="/profile">Profile</a>
+    <a href="/create">Post Item</a>
+    <a href="/messages">Messages</a>
+    <a href="/logout">Log Out</a>
+</nav>
+<main>
+    <form>
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name">
+
+        <label for="item_desc">Description:</label>
+        <textarea id="item_desc" name="item_desc"></textarea>
+
+        <label for="item_condition">Condition:</label>
+        <input type="text" id="item_condition" name="item_condition">
+
+        <button type="submit">Post Item</button>
+    </form>
+</main>
+<footer>
+    <p>Trading Website &copy; 2024</p>
+</footer>
+</body>
+</html>
