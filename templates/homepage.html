@@ -7,6 +7,7 @@
 <body>
 <header>
     <h1>Welcome to the Trading Website</h1>
+    <button class="sidebar-toggle">Toggle Sidebar</button>
 </header>
 <nav>
     <a href="/home">Home</a>
@@ -16,13 +17,37 @@
     <a href="/messages">Messages</a>
     <a href="/logout">Log Out</a>
 </nav>
-<main>
-    <h2>Featured Items</h2>
+<div class="sidebar">
+    <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/items">Browse Items</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/create">Post Item</a></li>
+        <li><a href="/messages">Messages</a></li>
+        <li><a href="/logout">Log Out</a></li>
+    </ul>
+</div>
+<main class="home-main">
+    <h2 class="featured-heading">Featured Items</h2>
     <div class="item">Item 1 Description</div>
     <div class="item">Item 2 Description</div>
 </main>
 <footer>
     <p>Trading Website &copy; 2024</p>
 </footer>
+<script>
+    const toggleButton = document.querySelector('.sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.home-main');
+
+    toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        if (sidebar.classList.contains('active')) {
+            mainContent.style.marginLeft = sidebar.offsetWidth + "px";
+        } else {
+            mainContent.style.marginLeft = "10px";
+        }
+    });
+</script>
 </body>
 </html>
