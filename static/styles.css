@@ -151,6 +151,7 @@ form {
     background-color: #333;
     color: white;
     padding: 20px;
+    margin-left: -40px;
     transition: left 0.3s; /* Smooth transition for the sidebar */
 }
 
@@ -160,13 +161,14 @@ form {
 }
 
 .home-main.full-width {
-    margin-left: 0; /* Full width when sidebar is hidden */
+    margin-left: 10px; /* Full width when sidebar is hidden */
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-left: 30px
 }
 
 .sidebar-logout {
