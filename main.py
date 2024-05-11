@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, Response
 from flask_session import Session  # Import the Session module
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ USER_CREDENTIALS = {'username': 'user', 'password': '1234'}
 def index():
     return redirect(url_for('login'))
 
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('homepage.html')
 
@@ -21,13 +21,12 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        print("Login Attempt: ", username)
         if username == USER_CREDENTIALS['username'] and password == USER_CREDENTIALS['password']:
             session['username'] = username
-            print("Login Successful")
-            return redirect(url_for('home'))
+            response = Response("")
+            response.headers["HX-Redirect"] = url_for('home')
+            return response
         else:
-            print("Login Failed")
             return '<h1>Invalid username or password</h1>'
     return render_template('login.html')
 
