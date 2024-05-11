@@ -41,7 +41,14 @@ main {
     border-radius: 8px;
 }
 
-.item, .profile, .post-form, .message {
+.item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.profile, .post-form, .message {
     border-bottom: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 10px;
@@ -159,6 +166,13 @@ form {
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin-top: 40px;
+}
+
+.sidebar-logout {
+    list-style: none;
+    padding: 0;
+    margin-top: 650px;
 }
 
 .sidebar a {
@@ -183,25 +197,38 @@ form {
 }
 
 /* Sidebar toggle button styling */
+/* Sidebar toggle button styling */
 .sidebar-toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    position: fixed;  /* Use fixed instead of absolute for consistent positioning */
+    left: 20px;       /* Position it 20px from the left edge */
+    top: 20px;        /* Keep it 20px from the top */
     padding: 10px;
     background-color: #5cb85c;
     color: white;
     border: none;
     cursor: pointer;
+    z-index: 1000;    /* Ensure it is above other elements */
 }
+
 
 .featured-heading {
     color: #333; /* Dark grey color for the text */
     text-align: left; /* Center-align the text */
     margin-top: 20px; /* Add space above the heading */
     margin-bottom: 10px; /* Add space below the heading */
-    margin-left: 10px; /* Offset from the left */
+    margin-left: 25px; /* Offset from the left */
     font-size: 24px; /* Increase the font size */
     font-weight: bold; /* Make the font bold */
+}
+
+.available-heading {
+    color: white; /* Dark grey color for the text */
+    text-align: left; /* Center-align the text */
+    margin-top: 20px; /* Add space above the heading */
+    margin-bottom: 10px; /* Add space below the heading */
+    margin-left: 25px; /* Offset from the left */
+    font-size: 30px; /* Increase the font size */
+    font-weight: simple; /* Make the font bold */
 }
 
 @media (max-width: 768px) {

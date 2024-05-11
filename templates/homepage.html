@@ -6,16 +6,11 @@
 </head>
 <body>
 <header>
-    <h1>Welcome to the Trading Website</h1>
     <button class="sidebar-toggle">Toggle Sidebar</button>
+    <h1>Welcome to the Trading Website</h1>
 </header>
 <nav>
-    <a href="/home">Home</a>
-    <a href="/items">Browse Items</a>
-    <a href="/profile">Profile</a>
-    <a href="/create">Post Item</a>
-    <a href="/messages">Messages</a>
-    <a href="/logout">Log Out</a>
+    <h2 class="available-heading">Available Items</h2>
 </nav>
 <div class="sidebar">
     <ul>
@@ -24,13 +19,17 @@
         <li><a href="/profile">Profile</a></li>
         <li><a href="/create">Post Item</a></li>
         <li><a href="/messages">Messages</a></li>
-        <li><a href="/logout">Log Out</a></li>
+        <div class="sidebar-logout">
+            <li><a href="/logout">Log Out</a></li>
+        </div>
     </ul>
 </div>
 <main class="home-main">
     <h2 class="featured-heading">Featured Items</h2>
     <div class="item">Item 1 Description</div>
     <div class="item">Item 2 Description</div>
+    <div class="item">Item 3 Description</div>
+    <div class="item">Item 4 Description</div>
 </main>
 <footer>
     <p>Trading Website &copy; 2024</p>
